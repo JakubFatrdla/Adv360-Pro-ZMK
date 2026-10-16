@@ -19,17 +19,6 @@
     behaviors {
         #include "macros.dtsi"
     #include "version.dtsi"
-
-        tmt: thumb_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            display-name = "Thumb Mod-Tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     keymap {
@@ -41,7 +30,7 @@
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                                      &none                    &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp NON_US_BACKSLASH    &kp LCTRL     &kp HOME        &kp PG_UP      &kp RCTRL             &kp RIGHT_ALT            &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                         &kp END         &kp PAGE_DOWN                                                 &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &tmt LEFT_COMMAND SPACE  &kp LEFT_ALT  &kp DELETE      &kp BACKSPACE  &tmt RIGHT_ALT RETURN  &tmt RIGHT_COMMAND SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mt LEFT_COMMAND SPACE  &kp LEFT_ALT  &kp DELETE      &kp BACKSPACE  &mt RIGHT_ALT RETURN  &mt RIGHT_COMMAND SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
